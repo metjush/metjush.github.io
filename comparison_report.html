@@ -863,6 +863,10 @@ body .markdown-body
 }</style><title>comparison_report</title></head><body><article class="markdown-body"><h1>
 <a id="user-content-comparing-facial-emotion-recognition-technology" class="anchor" href="#comparing-facial-emotion-recognition-technology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Facial Emotion Recognition Technology</h1>
 
+<blockquote>
+<p>We wish to stress that these are preliminary results based on a small number of tests without many formal statistical tests. They shouldn't be taken as the final conclusion on the quality of FER technology, but rather as an exploration of what the technology can offer its users without any adjustments, and without trying to provide "ideal" conditions for the technology to succeed.</p>
+</blockquote>
+
 <p>This report compares the results of our internal test of three facial emotion recognition technologies from different vendors. We had each technology analyze the same set of test videos. Next, we compared the results, looking for congruence between the technologies, for markers of instability or failure, and for consistency. We present preliminary results of this analysis, concluding that the state of the art of facial emotion recognition is currently only suited for highly controlled environments where very clear and expressive emotions are the point of detection and analysis. As such, we wouldn't at this point recommend it for the purpose of analyzing subtle changes in emotion during a psychodiagnostic test administered online, without any control over the recording conditions.</p>
 
 <h2>
@@ -917,7 +921,7 @@ body .markdown-body
 
 <p>First problem we encountered was when comparing results from <em>Emotient</em> and <em>IntraFace</em>. In several videos, <em>IntraFace</em> results produced approximately ten times fewer entries (frames) than those of <em>Emotient</em>. The test videos were recorded at a rather low frame rate (approx. <code>4 fps</code>). However, it apperead that <em>Emotient</em> had treated the videos as standard <code>30 fps</code> videos and somehow extrapolated the frames to match this frame rate. Therefore, to be able to correlate the results and compare them graphically, we had to downsample <em>Emotient</em> results to a size that was comparable to that of <em>IntraFace</em>. </p>
 
-<p>The heuristic used was as follows: only keep frames from the <em>Emotient</em> results, timestamp of which is sufficiently close to at least one timestamp in the <em>IntraFace</em> results. Sufficiently cňlose was defined as "the difference between the <em>Emotient</em> timestamp and the <em>IntraFace</em> timestamp is less than <code>epsilon</code>", where <code>epsilon</code> is an arbitrarily chosen small number. After a few tries, the <code>epsilon</code> parameter that most accurately downsampled the results was found to be <code>0.0007s</code> (or, more generally, between <code>0.001s</code> and <code>0.0005s</code>).</p>
+<p>The heuristic used was as follows: only keep frames from the <em>Emotient</em> results, timestamp of which is sufficiently close to at least one timestamp in the <em>IntraFace</em> results. Sufficiently close was defined as "the difference between the <em>Emotient</em> timestamp and the <em>IntraFace</em> timestamp is less than <code>epsilon</code>", where <code>epsilon</code> is an arbitrarily chosen small number. After a few tries, the <code>epsilon</code> parameter that most accurately downsampled the results was found to be <code>0.0007s</code> (or, more generally, between <code>0.001s</code> and <code>0.0005s</code>).</p>
 
 <h3>
 <a id="user-content-differences-in-specific-emotions" class="anchor" href="#differences-in-specific-emotions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Differences in specific emotions</h3>
