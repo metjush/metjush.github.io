@@ -1123,5 +1123,20 @@ body .markdown-body
 
 <p>We posit that the crux lies in the following: with very expressive videos (as those in the first test set were), both technologies were able to agree on the general sentiment (positive/negative/neutral). However, with a much less expressive video (taking a test for 10 minutes), the changes between expressions are less visible, less dramatic and rapid, and the emotions themselves are more subtle, if apparent at all. Hence, there is much greater room for error and uncertainty in the results, leading to significantly greater disagreement between the two technologies. Also, the algorithms (we believe) tended to pick up certain visual clues (convex lips, narrow eyes) and using them as primary determinants of the emotion (happy), even though it is obvious to any human evaluator that the face clearly doesn't express happiness. (See attached illustration.)</p>
 
-<p>As such, we find the technology a little too crude for our stated use case: analyzing subtle changes in emotions when the subject takes a psychodiagnostic test online. </p>
+<p><a href="/Users/metjush/Dropbox/Quant/Matus%20Luptak/fer_test_videos/positiveMatrix.png" target="_blank"><img src="/Users/metjush/Dropbox/Quant/Matus%20Luptak/fer_test_videos/positiveMatrix.png" alt="Frames identified as happy" title="Happy Faces" style="max-width:100%;"></a></p>
+
+<p><strong>As such, we find the technology a little too crude for our stated use case: analyzing subtle changes in emotions when the subject takes a psychodiagnostic test online.</strong> </p>
+
+<h2>
+<a id="user-content-future-direction" class="anchor" href="#future-direction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future direction</h2>
+
+<p>While at the current moment, we can't recommend that facial expression recognition technology be used for analyzing emotions during a psychodiagnostic test, we do realize the potential of the technology. However, for it to be commercially viable, there are improvements that we see that need to happen:</p>
+
+<ol>
+<li>Face detection has to be robust enough to accomodate glasses, tilted heads, non-white subjects and sub-par lighting conditions. IntraFace and Emotient have mostly succeeded in this aspect, whereas Noldus hasn't.</li>
+<li>The classifiers could offer an option of only outputing descriptors of expression states, not emotional states. That is, instead of classifying a face as <em>happy</em>, it could merely describe it as <em>smiling mouth</em>, <em>narrowed eyes</em>, etc. While it would probably prove less user-friendly, it would be far more objective - and for some users a preferred result. Emotient and Noldus do incorporate some variations of identification of facial action units. Building reporting on this identification could prove to be an interesting avenue for exploration.</li>
+<li>The classifiers should be trained on a more diverse set of expression examples for each emotion so that they don't focus too much on few key aspects (convex mouth), but have a more complex understanding of what makes a happy face for instance.</li>
+</ol>
+
+<p>Until such time, we recommend that we do not use FER in our testing product, as we can't vouch for its reliability and accuracy in assessing true emotions durign a test.</p>
 </article></body></html>
