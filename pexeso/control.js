@@ -25,6 +25,13 @@ $(document).ready(function() {
 		$('.piece.opened').text("m&m").addClass('closed').removeClass('opened');
 	}
 
+	function countFound() {
+		if ($('.found').length == $('.piece').length) {
+			// puzzle won!
+			console.log('WINNER');
+		}
+	}
+
 	// click function
 	function clickPiece(element) {
 		if (nClicks == 0) {
@@ -48,12 +55,11 @@ $(document).ready(function() {
 			gameState[key][order+1] = 1;
 			if (gameState[key][1] + gameState[key][3] == 2) {
 				// found!
-				console.log(gameState[key] )
 				$($('.piece')[gameState[key][0]]).removeClass('opened').addClass('found');
-				$($('.piece')[gameState[key][2]]).removeClass('opened').addClass('found');
-				// $('.piece[data-index="' + key + '"]').addClass('found').removeClass('opened');
-				// check if all aren't found
+				$($('.piece')[gameState[key][2]]).removeClass('opened').addClass('found');				
 				nClicks = 0;
+				// check if all aren't found
+				countFound();
 			} else if (nClicks == 2) {
 				resetBoard();
 				nClicks = 0;

@@ -6,8 +6,7 @@
 }
 
 body {
-		background: #CFF09E;
-
+		background: #F6E39E;
 }
 
 #pexeso_container {
@@ -21,14 +20,14 @@ body {
 	height: 200px;
 	display: inline-block;
 	margin: 5px;
-	border-bottom: 5px solid #79BD9A;
-	background: #A8DBA8;
+	border-bottom: 5px solid #CB2A15;
+	background: #D83621;
 	text-align: center;
 	padding: 15px;
 	font-size: 150%;
 	letter-spacing: 1px;
 	cursor: pointer;
-	color: #0B486B;
+	color: white;
 
 	-webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -37,8 +36,8 @@ body {
 }
 
 .piece.closed {
-	background: #0B486B;
-	border-bottom: 5px solid #3B8686;
+	background: #009F91;
+	border-bottom: 5px solid #008E7F;
 	height: 50px;
 	padding-top: 90px;
 	padding-bottom: 90px;
@@ -48,8 +47,9 @@ body {
 }
 
 .piece.found {
-	background: #aaa;
+	background: #273129;
 	font-color: #0B486B;
-	border-bottom: 5px solid #3B8686;
+	border-bottom: 5px solid #202A22;
 	cursor: default;
+	color: #FECA14;
 }
