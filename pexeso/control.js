@@ -54,7 +54,7 @@ $(document).ready(function() {
 			nClicks += 1;
 			$(element).removeClass('closed');
 			$(element).addClass('opened');
-			$(element).text(key);
+			$(element).html(key);
 			var order = gameState[key][0] == index ? 0 : 2;
 			gameState[key][order+1] = 1;
 			if (gameState[key][1] + gameState[key][3] == 2) {

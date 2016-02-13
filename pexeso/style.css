@@ -43,14 +43,16 @@ p {
 }
 
 .piece {
-	width: 200px;
-	height: 200px;
+	width: 230px;
+	height: 50px;
+	padding-top: 90px;
+	padding-bottom: 90px;
 	display: inline-block;
 	margin: 5px;
 	border-bottom: 5px solid #CB2A15;
 	background: #D83621;
 	text-align: center;
-	padding: 15px;
+	
 	font-size: 150%;
 	letter-spacing: 1px;
 	cursor: pointer;
