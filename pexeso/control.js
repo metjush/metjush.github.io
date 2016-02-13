@@ -7,7 +7,8 @@ $(document).ready(function() {
 	var container = $('#pexeso_container');
 
 	// keywords
-	var keywords = ['besný kamzík', 'divný pes', 'oni sa len hrajú', 'zelený luck', 'počkáme, kým podochádza', 'trnavské mýto', 'stôl u kubistu', 'shepherd walking', 'morning mad drop', 'pohárik na plôtiku', 'I dont know what Im doing', 'jančuška mančuška pančuška'];
+	var keywords = ['besný kamzík', 'divný pes', 'oni sa len hrajú', 'zelená náhoda', 'počkáme, kým podochádza', 'trnavské mýto', 'stôl u kubistu', 'shepherd walking', 'morning mad drop', 'pohárik na plôtiku', 'I dont know what Im doing', 'jančuška mančuška pančuška'];
+
 	var backside = 'm&m';
 
 	// count number of necessary pieces and draw them based on H and W
@@ -22,13 +23,16 @@ $(document).ready(function() {
 	}
 
 	function closePieces() {
-		$('.piece.opened').text("m&m").addClass('closed').removeClass('opened');
+		$('.piece.opened').text(backside).addClass('closed').removeClass('opened');
 	}
 
 	function countFound() {
 		if ($('.found').length == $('.piece').length) {
 			// puzzle won!
 			console.log('WINNER');
+			// hide all pieces
+			$('.found').hide();
+			$('#victory').show();
 		}
 	}
 
@@ -80,7 +84,7 @@ $(document).ready(function() {
 		var key = doubleKeys[index];
 		// remove it from the array
 		doubleKeys.splice(index, 1);
-		var pieceString = "<div class='piece closed' data-back='" + key + "' data-index='" + j + "'>m&m</div>";
+		var pieceString = "<div class='piece closed' data-back='" + key + "' data-index='" + j + "'>" + backside + "</div>";
 		container.append(pieceString);
 		// it holds key of this piece plus wheter it is deemed found or not
 		if (gameState[key] === undefined) {
