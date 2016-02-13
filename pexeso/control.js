@@ -54,7 +54,7 @@ $(document).ready(function() {
 				nClicks = 0;
 			} else if (nClicks == 2) {
 				resetBoard();
-				timeout = window.setTimeout(closePieces, 1500);
+				timeout = window.setTimeout(closePieces, 800);
 				// add some animation
 				nClicks = 0;
 			}
