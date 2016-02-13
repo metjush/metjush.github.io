@@ -27,7 +27,11 @@ $(document).ready(function() {
 
 	// click function
 	function clickPiece(element) {
-
+		if (nClicks == 0) {
+			window.clearTimeout(timeout);
+			closePieces();
+		}
+		
 		// check if the piece isn't out of the game already
 		var isDone = $(element).hasClass('found');
 		if (isDone) return false;
@@ -35,7 +39,6 @@ $(document).ready(function() {
 		var key = $(element).attr('data-back');
 		var isClosed = $(element).hasClass('closed');
 		var index = parseInt($(element).attr('data-index'));
-		console.log(key);
 		if (isClosed) {
 			nClicks += 1;
 			$(element).removeClass('closed');
@@ -43,7 +46,6 @@ $(document).ready(function() {
 			$(element).text(key);
 			var order = gameState[key][0] == index ? 0 : 2;
 			gameState[key][order+1] = 1;
-			console.log(gameState[key]);
 			if (gameState[key][1] + gameState[key][3] == 2) {
 				// found!
 				console.log(gameState[key] )
@@ -54,9 +56,9 @@ $(document).ready(function() {
 				nClicks = 0;
 			} else if (nClicks == 2) {
 				resetBoard();
+				nClicks = 0;
 				timeout = window.setTimeout(closePieces, 800);
 				// add some animation
-				nClicks = 0;
 			}
 		}
 	}
@@ -81,7 +83,7 @@ $(document).ready(function() {
 			gameState[key][2] = j;
 		}
 	}
-	console.log(gameState);
+	
 	$('.piece').click(function(){
 		clickPiece($(this));
 	});
