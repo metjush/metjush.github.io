@@ -13,17 +13,18 @@
 }
 
 .piece {
-	width: 90px;
-	height: 90px;
+	width: 140px;
+	height: 140px;
 	display: inline-block;
 	margin: 5px;
 	border-bottom: 5px solid #79BD9A;
 	background: #A8DBA8;
 	text-align: center;
-	padding: 5px;
-	font-size: 100%;
+	padding: 10px;
+	font-size: 150%;
 	letter-spacing: 1px;
 	cursor: pointer;
+	color: #0B486B;
 
 	-webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -34,11 +35,12 @@
 .piece.closed {
 	background: #0B486B;
 	border-bottom: 5px solid #3B8686;
-	height: 40px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	height: 60px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	font-size: 150%;
 	font-weight: bold;
+	color: white;
 }
 
 .piece.found {
