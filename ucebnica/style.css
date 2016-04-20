@@ -1,0 +1,281 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+body {
+        		font: 14pt 'Lora', Georgia, Times, serif;
+        		color: #333;
+        		background: #fff;
+        	}
+        	p, ul {
+        		margin:16pt 0;
+        		width:90%;
+        		padding:0 5%;
+        	}
+     		li {
+     			font-style: italic;
+     			color: #555;
+     			width:95%;
+        		padding:1% 2.5%;     		
+        	}
+        	strong {
+        		font-weight: bold;
+        	}
+        	em {
+        		font-style: italic;
+        	}
+	        section {
+	        	width:100%;
+	        	text-align:left;
+	        	margin:0;
+	        	padding:0;
+	        }
+	        article{ 
+	        	width: 75%;
+	        	text-align:left;
+	        	margin:0;
+	        	float:left;
+	        }
+	        header {
+	        	padding: 10% 0;
+	        	/*http://pixabay.com/en/chocolate-cake-baking-food-dessert-19724/*/
+	        	background: fixed url(header.jpg);
+	        	color:white;
+	        	text-align: center;
+	        	width:100%;
+	        	margin:0;
+	        	background-size: 100% ;
+	        }
+	        article {
+	        	border-bottom: 1px dotted #333;
+	        }
+	        article a{
+	        	text-align: center;
+	        	text-decoration: none;
+	        	font-size: 12pt;
+	        	margin:14pt 0;
+        		width:90%;
+        		padding:0 5%;
+        		color: #333;
+        		font-weight: bold;
+	        }
+	        nav {
+	        	font-size: 12pt;
+	        	width:25%;
+	        	text-align:right;
+	        	margin:0;
+	        	background:#333;
+	        	color:#efefef;
+	        	/*position:fixed;*/
+	        	position:absolute;
+	        	left:75%;
+	        	height:100%;
+	        	z-index: -1;
+	        }
+	        nav.fix {
+	        	position:fixed;
+	        	top:0px;
+	        }
+	        nav a {
+        		color: #efefef;
+        		font-size: 14pt;
+        		text-decoration: none;
+        	}
+        	.aktualne {
+        		font-weight: bold;
+        	}
+        	nav h4 {
+        		font-size: 16pt;
+        		font-weight: bold;
+        		color: aquamarine;
+        		padding:5%;
+        		cursor: pointer;
+        	}
+        	nav h4.skryte {
+        		color:#555;
+        	}
+        	nav > #disqus_thread > iframe {
+        		width: 80%;
+        		padding:0 2.5%;
+        	}
+        	header h4 {
+        		padding:0;
+        		font-size: 16pt;
+        		text-align: center;
+        		font-style: italic;
+        	}
+	        .cvicenia {
+	        	color: #777;
+	        }
+	        h1 {
+	        	text-align: center;
+	        	font-weight: bold;
+	        	font-size: 30pt;
+	        	padding:0 5% 3% 5%;
+
+	        }
+	        h2 {
+	        	font-size: 24pt;
+	        	padding:5%;
+	        	font-weight: bold;
+	        }
+	        h3 {
+	        	font-size: 20pt;
+	        	padding:0 5%;
+	        }
+
+	        .textkapitoly p:hover {
+	        	border-left: 5px solid aquamarine ;
+	        }
+	        p.klik {
+	        	background: #333;
+	        	color: aquamarine;
+	        	padding: 5%;
+	        	border-left: 5px solid aquamarine ;
+	        }
+	        p.klik:hover {
+	        	background:#333;
+	        }
+	        form {
+	        	width:90%;
+	        	padding:5%;
+	        	margin-top: 2%;
+	        }
+	        input[type=text]{
+	        	width:90%;
+	        	height:42pt;
+	        	font: 10pt 'Lora', Georgia, Times, serif;
+	        }
+	        .initial {
+	        	color:aquamarine;
+	        	font-size:50pt;
+	        }
+	        .share {
+	        	color:#55acee;
+	        	padding: 0;
+	        	font: 10pt 'Lora', Georgia, Times, serif;
+	        	font-weight: bold;
+	        	background:none;
+	        	border:none;
+	        	margin:1% 0;
+	        	text-align: left;
+	        	cursor: pointer;
+	        	display:block;
+	        }
+	        nav > .klik {
+	        	display:block;
+	        }
+	        footer {
+	        	width: 100%;
+	        	padding: 10% 0;
+	        	background: aquamarine;
+	        	color:#333;
+	        	text-align: center;
+	        	width:100%;
+	        	margin:0;
+	        	display: block;
+	        	float:left;
+	        	z-index: 99;
+	        }
+	        footer a {
+	        	text-decoration: none;
+	        	font-weight: bold;
+	        	color:inherit;
+	        }
+	        footer a:hover {
+	        	color:white;
+	        }
+	        footer h4 {
+	        	font-size: 16pt;
+        		font-weight: bold;
+        		color: #333;
+        		padding:0 5% 5% 5%;
+	        }
+	        footer form {
+	        	width: 90%;
+	        	padding: 0 5%;
+	        	text-align: center;
+	        }
+	        footer form textarea {
+	        	width: 60%;
+	        	display: block;
+	        	height: 10%;
+	        	font: 12pt 'Lora', Georgia, Times, serif;
+	        	border:none;
+	        	resize: vertical;
+	        	max-height: 15%;
+	        	padding: 1%;
+	        	margin: 0 20% 1% 20%;
+	        }
+	        footer form input[type=text] {
+	        	width: 60%;
+	        	display: block;
+	        	padding: 1%;
+	        	border:none;
+	        	height: 5%;
+	        	margin: 0 20% 1% 20%;
+
+	        }
+	        footer form input[type=submit] {
+	        	width: 62%;
+	        	display: block;
+	        	padding: 1%;
+	        	border:none;
+	        	height: 5%;
+	        	margin: 0 20%;
+
+	        	background:#333;
+	        	color:white;
+	        	cursor: pointer;
+	        }
